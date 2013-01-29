@@ -12,10 +12,15 @@
 
 #import "TSDetailViewController.h"
 
+#import <Parse/Parse.h>
+
 @implementation TSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"jUrq8VHqTZOBc7ppjDGFzbFggUOJWKPlspZh1xEH"
+                  clientKey:@"oiAw1T6pHOykcYci48qnmBpDdym2aF4B4hORzb6A"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {

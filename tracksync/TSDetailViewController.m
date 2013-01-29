@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 kickass. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "TSDetailViewController.h"
 
 @interface TSDetailViewController ()
@@ -45,6 +46,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
 }
 
 - (void)didReceiveMemoryWarning
